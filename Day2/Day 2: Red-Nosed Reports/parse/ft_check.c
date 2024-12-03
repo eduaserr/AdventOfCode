@@ -26,25 +26,19 @@ int	check_order(char **str)
 	n2 = atoi(str[1]);
 	while (str[i] && n1 < n2)
 	{
-		printf("menor que\n");
 		n1 = atoi(str[i - 1]);
 		n2 = atoi(str[i]);
-		printf("%d > %d?\n", n1, n2);
-		printf("	%d > %d\n", diff(n1, n2), 3);
 		if ((n1 > n2) || diff(n1, n2) > 3)
-			return (printf("0\n"), 0);
+			return (0);
 		i++;
 	}
 	while (str[i] && n1 > n2)
 	{
-		printf("mayor que\n");
 		n1 = atoi(str[i - 1]);
 		n2 = atoi(str[i]);
-		printf("%d > %d?\n", n1, n2);
-		printf("	%d > %d\n", diff(n1, n2), 3);
 		if ((n1 < n2) || diff(n1, n2) > 3)
-			return (printf("0\n"), 0);
+			return (0);
 		i++;
 	}
-	return (printf("1\n"), 1);
+	return (1);
 }
