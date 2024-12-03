@@ -38,12 +38,8 @@ t_list	*init_stack(int nbr);
 t_list	*ft_lstlast_ps(t_list *stack);
 void	lstadd_back(t_list **stack, t_list *node);
 void	get_nbrs(char **str, t_list **left, t_list **right);
-//sort list
-t_list	*sort_list(t_list *lst);
 
 // OPERATIONS
-int		getmax(int left, int right);
-int		getmin(int left, int right);
-int		operation(t_list **left, t_list **right);
+int		operation(t_list *left, t_list *right);
 
 #endif

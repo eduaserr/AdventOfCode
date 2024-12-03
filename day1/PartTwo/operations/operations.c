@@ -1,32 +1,25 @@
 #include "../historian_hysteria.h"
 
-int	getmax(int left, int right)
+int	operation(t_list *left, t_list *right)
 {
-	if (left >= right)
-		return (left);
-	return (right);
-}
+	int	res = 0;
+	int i;
+	t_list *tmp;
 
-int	getmin(int left, int right)
-{
-	if (left < right)
-		return (left);
-	return (right);
-}
-
-int	operation(t_list **left, t_list **right)
-{
-	int max;
-	int min;
-	int result = 0;
-
-	while (*left && *right)
+	while (left)
 	{
-		max = getmax((*left)->n, (*right)->n);
-		min = getmin((*left)->n, (*right)->n);
-		result += (max - min);
-		*left = (*left)->next;
-		*right = (*right)->next;
+		tmp = right;
+		i = 0;
+		while (tmp)
+		{
+			if (left->n == tmp->n)
+			{
+				i++;
+			}
+			tmp = tmp->next;
+		}
+		res += left->n * i;
+		left = left->next;
 	}
-	return (result);
+	return (res);
 }

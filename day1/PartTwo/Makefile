@@ -10,8 +10,7 @@ SRCS = historian_hysteria.c \
 		operations/operations.c \
 		string/ft_split.c \
 		string/get_next_line.c \
-		t_list/init_stack.c \
-		t_list/sort.c
+		t_list/init_stack.c 
 
 # OBJ
 OBJS = $(SRCS:.c=.o)

@@ -20,9 +20,7 @@ int main(void)
 		get_nbrs(str, &left, &right);
 		line = get_next_line(fd);
 	}
-	left = sort_list(left);
-	right = sort_list(right);
-	result = operation(&left, &right);
+	result = operation(left, right);
 	close(fd);
 	printf("%ld\n", result);
 	return (0);
