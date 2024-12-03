@@ -16,9 +16,7 @@ int main(void)
 		str = ft_split(line);
 		free(line);
 		if (check_order(str) == 1)
-		{
 			result++;
-		}
 		line = get_next_line(fd);
 	}
 	close(fd);

@@ -16,9 +16,7 @@ int	check_order(char **str)
 
 	while (str[j + 1])
 	{
-		n1 = atoi(str[j]);
-		n2 = atoi(str[j + 1]);
-		if (n1 == n2)
+		if (atoi(str[j]) == atoi(str[j + 1]))
 			return (0);
 		j++;
 	}
