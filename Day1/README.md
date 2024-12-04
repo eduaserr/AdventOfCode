@@ -1,4 +1,4 @@
---- Day 1: Historian Hysteria ---
+<h1>--- Day 1: Historian Hysteria ---</h1>
 
 The Chief Historian is always present for the big Christmas sleigh launch, but nobody has seen him in months! Last anyone heard, he was visiting locations that are historically significant to the North Pole; a group of Senior Historians has asked you to accompany them as they check the places they think he was most likely to visit.
 
@@ -16,10 +16,10 @@ There's just one problem: by holding the two lists up side by side (your puzzle 
 
 For example:
 
-<table>
+<table style="margin: 0 auto;">
   <tr>
-    <th>Columna 1</th>
-    <th>Columna 2</th>
+    <th>Left column</th>
+    <th>Right column</th>
   </tr>
   <tr><td>3</td><td>4</td></tr>
   <tr><td>4</td><td>3</td></tr>
@@ -47,7 +47,7 @@ Your actual left and right lists contain many location IDs. What is the total di
 
 
 
---- Part Two ---
+<h1>--- Part Two ---</h1>
 
 Your analysis only confirmed what everyone feared: the two lists of location IDs are indeed very different.
 
