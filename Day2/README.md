@@ -8,12 +8,14 @@ They're quick to add that - since you're already here - they'd really appreciate
 
 The unusual data (your puzzle input) consists of many reports, one report per line. Each report is a list of numbers called levels that are separated by spaces. For example:
 
-7 6 4 2 1
-1 2 7 8 9
-9 7 6 2 1
-1 3 2 4 5
-8 6 4 4 1
-1 3 6 7 9
+<table>
+	<tr><td>7</td><td>6</td><td>4</td><td>2</td><td>1</td></tr>
+	<tr><td>1</td><td>2</td><td>7</td><td>8</td><td>9</td></tr>
+	<tr><td>9</td><td>7</td><td>6</td><td>2</td><td>1</td></tr>
+	<tr><td>1</td><td>3</td><td>2</td><td>4</td><td>5</td></tr>
+	<tr><td>8</td><td>6</td><td>4</td><td>4</td><td>1</td></tr>
+	<tr><td>1</td><td>3</td><td>6</td><td>7</td><td>9</td></tr>
+</table>
 
 This example data contains six reports each containing five levels.
 
@@ -24,11 +26,17 @@ Any two adjacent levels differ by at least one and at most three.
 In the example above, the reports can be found safe or unsafe by checking those rules:
 
 7 6 4 2 1: Safe because the levels are all decreasing by 1 or 2.
+
 1 2 7 8 9: Unsafe because 2 7 is an increase of 5.
+
 9 7 6 2 1: Unsafe because 6 2 is a decrease of 4.
+
 1 3 2 4 5: Unsafe because 1 3 is increasing but 3 2 is decreasing.
+
 8 6 4 4 1: Unsafe because 4 4 is neither an increase or a decrease.
+
 1 3 6 7 9: Safe because the levels are all increasing by 1, 2, or 3.
+
 So, in this example, 2 reports are safe.
 
 Analyze the unusual data from the engineers. How many reports are safe?
@@ -36,6 +44,7 @@ Analyze the unusual data from the engineers. How many reports are safe?
 
 
 --- Part Two ---
+
 The engineers are surprised by the low number of safe reports until they realize they forgot to tell you about the Problem Dampener.
 
 The Problem Dampener is a reactor-mounted module that lets the reactor safety systems tolerate a single bad level in what would otherwise be a safe report. It's like the bad level never happened!
@@ -45,11 +54,17 @@ Now, the same rules apply as before, except if removing a single level from an u
 More of the above example's reports are now safe:
 
 7 6 4 2 1: Safe without removing any level.
+
 1 2 7 8 9: Unsafe regardless of which level is removed.
+
 9 7 6 2 1: Unsafe regardless of which level is removed.
+
 1 3 2 4 5: Safe by removing the second level, 3.
+
 8 6 4 4 1: Safe by removing the third level, 4.
+
 1 3 6 7 9: Safe without removing any level.
+
 Thanks to the Problem Dampener, 4 reports are actually safe!
 
 Update your analysis by handling situations where the Problem Dampener can remove a single level from unsafe reports. How many reports are now safe?
