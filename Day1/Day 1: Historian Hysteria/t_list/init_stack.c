@@ -43,7 +43,6 @@ void	get_nbrs(char **str, t_list **left, t_list **right)
 	t_list	*new_node;
 	int i = 0;
 
-	
 	while (str[i])
 	{
 		new_node = init_stack(atoi(str[i]));
